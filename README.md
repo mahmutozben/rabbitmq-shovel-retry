@@ -1,2 +1,3 @@
-# rabbitmq-shovel-retry
-This project provides periodic reprocessing of messages accumulated in error queues. It is a scheduled job.
+# rabbitmq-shovel-retry-job
+
+Checks following queue names after if is there are have many errors it moves object from error queues to handled queues. 

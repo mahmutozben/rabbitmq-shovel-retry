@@ -1,0 +1,27 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: rabbitmq-shovel-retry
+  namespace: cronjob
+spec:
+  schedule: "*/5 * * * *"
+  jobTemplate:
+    spec:
+      parallelism: 1
+      template:
+        spec:
+          containers:
+            - name: rabbitmq-shovel-retry
+              image:  rabbitmq-shovel-retry:latest
+              volumeMounts:
+                - name: tz-config
+                  mountPath: /etc/localtime
+              env:
+                - name: ENV
+                  value: prod
+              args: [ "go run main.go"]
+          volumes:
+            - name: tz-config
+              hostPath:
+                path: /usr/share/zoneinfo/Europe/Istanbul
+          restartPolicy: OnFailure

@@ -1,0 +1,8 @@
+{
+  "rabbitMq" : {
+    "user" : "user",
+    "password" : "pass",
+    "server" : "http://localhost:15672"
+  },
+  "channelName" : "slack-alert-channel"
+}
