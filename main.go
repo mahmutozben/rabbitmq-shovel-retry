@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"gitlab.hepsiburada.com/campaign/rabbitmq-shovel-retry/rabbitClient"
-	"gitlab.hepsiburada.com/campaign/rabbitmq-shovel-retry/slackClient"
+	"github.com/mahmutozben/rabbitmq-shovel-retry/rabbitClient"
+	"github.com/mahmutozben/rabbitmq-shovel-retry/slackClient"
 	"os"
 )
 

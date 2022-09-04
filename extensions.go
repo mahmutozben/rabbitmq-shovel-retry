@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"gitlab.hepsiburada.com/campaign/rabbitmq-shovel-retry/config"
+	"github.com/mahmutozben/rabbitmq-shovel-retry/config"
 	"io/ioutil"
 	"os"
 )
